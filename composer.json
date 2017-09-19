@@ -1,0 +1,29 @@
+{
+	"name": "wp-kit/cleanoquent",
+	"description": "A wp-kit component that serves clean Eloquent models for Wordpress",
+	"keywords": ["wordpress", "themosis", "assley", "wp-kit", "eloquent", "clean", "oop"],
+	"homepage" : "https://github.com/wp-kit/cleanoquent",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Creative Little Dots",
+			"email" : "tech@creativelittledots.co.uk",
+			"homepage" : "https://creativelittledots.co.uk/",
+			"role" : "Developers"
+		}
+	],
+	"config": {
+		"preferred-install": "dist"
+	},
+	"require": {
+        "php": ">=5.6.4",
+		"wp-kit/magic-meta": "1.*",
+    "wp-kit/softdeletes": "1.*"
+    },
+	"type": "library",
+	"autoload": {
+        "psr-4": {
+            "WPKit\\Cleanoquent\\": "src/Cleanoquent" 
+        }
+    }
+}
