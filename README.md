@@ -14,7 +14,7 @@ composer require "wp-kit/cleanoquent"
 
 ### Model
 
-```wp-kit/cleanoquent``` comes with various models which you can extend. 
+```wp-kit/cleanoquent``` comes with various models which you can extend. For posts ```wp-kit/cleanoquent``` uses [```wp-kit/magic-meta```](https://github.com/wp-kit/magic-meta) to append and query for meta data.
 
 ```php
 namespace Theme\Models;
