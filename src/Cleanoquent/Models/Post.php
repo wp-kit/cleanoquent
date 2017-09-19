@@ -4,8 +4,8 @@
 	
 	use WPEloquent\Model\Post as BasePost;
 	use WPKit\SoftDeletes\SoftDeletes;
-	use WPKit\MagicMeta\IsMagic;
-	use WPKit\MagicMeta\TransformsQuery;
+	use WPKit\MagicMeta\Traits\IsMagic;
+	use WPKit\MagicMeta\Traits\TransformsQuery;
 	
 	class Post extends BasePost {
   
