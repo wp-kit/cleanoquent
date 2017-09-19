@@ -54,6 +54,16 @@
 	        $this->buildAppends();
 	    }
 	    
+	     /**
+	     * Get post type
+	     *
+	     * @return string
+	     */
+	    public function getPostType() 
+	    {
+		    return $this->post_type;
+	    }
+	    
 	    /**
 	     * Build $appends property
 	     *
