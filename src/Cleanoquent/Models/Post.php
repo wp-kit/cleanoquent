@@ -10,6 +10,34 @@
 	class Post extends BasePost {
   
 	    use SoftDeletes, IsMagic, TransformsQuery;
+	    
+	    /**
+	     * Enable timestamps.
+	     *
+	     * @var boolean
+	     */
+	    public $timestamps = true;
+	    
+	    /**
+	     * The name of the "created at" column.
+	     *
+	     * @var string
+	     */
+	    const CREATED_AT = 'post_date';
+	
+	    /**
+	     * The name of the "updated at" column.
+	     *
+	     * @var string
+	     */
+	    const UPDATED_AT = 'post_modified';
+	
+	    /**
+	     * The name of the "deleted at" column.
+	     *
+	     * @var string
+	     */
+	    const DELETED_AT = 'post_status';
 			
 		/**
 	     * The hidden attributes that are mass assignable.

@@ -5,8 +5,29 @@
 	use WPEloquent\Model\Comment as BaseComment;
 	
 	class Comment extends BaseComment {
+		
+		/**
+	     * Enable timestamps.
+	     *
+	     * @var boolean
+	     */
+	    public $timestamps = true;
+		
+		/**
+	     * The name of the "created at" column.
+	     *
+	     * @var string
+	     */
+	    const CREATED_AT = 'comment_date';
 	
-	   /**
+	    /**
+	     * The name of the "updated at" column.
+	     *
+	     * @var string
+	     */
+	    const UPDATED_AT = null;
+	
+		/**
 	     * The hidden attributes that are mass assignable.
 	     *
 	     * @var array
