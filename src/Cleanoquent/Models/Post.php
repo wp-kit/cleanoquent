@@ -109,44 +109,48 @@
 			
 				$post_type = get_post_type_object( $post_type );
 				
-				if( post_type_supports( $post_type->name, 'title' ) ) {
-					
-					$appends = array_merge($appends, [
-						'title'
-					]);
-					
-				}
+				if( $post_type ) {
 				
-				if( post_type_supports( $post_type->name, 'editor' ) ) {
+					if( post_type_supports( $post_type->name, 'title' ) ) {
+						
+						$appends = array_merge($appends, [
+							'title'
+						]);
+						
+					}
 					
-					$appends = array_merge($appends, [
-						'content'
-					]);
+					if( post_type_supports( $post_type->name, 'editor' ) ) {
+						
+						$appends = array_merge($appends, [
+							'content'
+						]);
+						
+					}
 					
-				}
-				
-				if( post_type_supports( $post_type->name, 'author' ) ) {
+					if( post_type_supports( $post_type->name, 'author' ) ) {
+						
+						$appends = array_merge($appends, [
+							'author_id'
+						]);
+						
+					}
 					
-					$appends = array_merge($appends, [
-						'author_id'
-					]);
+					if( post_type_supports( $post_type->name, 'thumbnail' ) ) {
+						
+						$appends = array_merge($appends, [
+							'thumbnail_id'
+						]);
+						
+					}
 					
-				}
-				
-				if( post_type_supports( $post_type->name, 'thumbnail' ) ) {
-					
-					$appends = array_merge($appends, [
-						'thumbnail_id'
-					]);
-					
-				}
-				
-				if( $post_type->public ) {
-					
-					$appends = array_merge($appends, [
-						'url',
-						'comments_open'
-					]);
+					if( $post_type->public ) {
+						
+						$appends = array_merge($appends, [
+							'url',
+							'comments_open'
+						]);
+						
+					}
 					
 				}
 				
@@ -340,7 +344,7 @@
 	        // as these attributes are not really in the attributes array, but are run
 	        // when we need to array or JSON the model for convenience to the coder.
 	        foreach($this->getMagicMeta() as $meta_key => $key) {
-			    $attributes[$key] = $this->mutateMetaValue($key, $this->getMetaValue($meta_key));
+			    $attributes[$key] = $this->mutateMetaValue($key, $this->getMeta($meta_key));
 		    }
 	
 	        // Here we will grab all of the appended, calculated attributes to this model
