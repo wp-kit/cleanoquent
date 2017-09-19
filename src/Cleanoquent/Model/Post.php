@@ -3,14 +3,14 @@
 	namespace WPKit\Cleanoquent\Models;
 	
 	use WPEloquent\Model\Post as BasePost;
-  use WPKit\SoftDeletes\SoftDeletes;
-  use WPKit\MagicMeta\IsMagic;
-  use WPKit\MagicMeta\TransformsQuery;
+	use WPKit\SoftDeletes\SoftDeletes;
+	use WPKit\MagicMeta\IsMagic;
+	use WPKit\MagicMeta\TransformsQuery;
 	
 	class Post extends BasePost {
   
-    use SoftDeletes, IsMagic, TransformsQuery;
-		
+	    use SoftDeletes, IsMagic, TransformsQuery;
+			
 		/**
 	     * The hidden attributes that are mass assignable.
 	     *
