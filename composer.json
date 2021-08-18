@@ -17,8 +17,8 @@
 	},
 	"require": {
         "php": ">=7.2",
-		"wp-kit/magic-meta": "1.*",
-    "wp-kit/softdeletes": "1.*"
+		"wp-kit/magic-meta": "^1.0.1",
+    "wp-kit/softdeletes": "^1.0.3"
     },
 	"type": "library",
 	"autoload": {
